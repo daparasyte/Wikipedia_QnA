@@ -5,7 +5,7 @@ import wikipedia
 
 st.set_page_config(
     page_title="Wikipedia QnA",
-    page_icon=Image.open("src/logo.png"),
+    page_icon=Image.open("logo.png"),
     layout="wide",
 )
 
