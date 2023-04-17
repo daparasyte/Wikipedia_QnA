@@ -45,7 +45,7 @@ with col1:
         st.components.v1.iframe(src=wiki_URL, width=None, height=550, scrolling=True)
 
 with col2:
-    question = st.text_input('Ask a question - What, Why, How, When?', value="", placeholder='What are legumes rich in?')
+    question = st.text_input('Ask a question', value="", placeholder='What are legumes rich in?')
     with st.spinner('Finding answer...'):
         if question is not None and question != "":
             html_answers = wikipedia.get_html_answers(question, wiki_URL, 3)
