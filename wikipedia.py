@@ -48,7 +48,7 @@ def get_wiki_extract(url):
     return wiki_extract
 
 def get_answers(question, url):
-    question_answerer = pipeline("question-answering", model='xlm-roberta-base')
+    question_answerer = pipeline("question-answering", model='deepset/roberta-large-squad2')
     wiki_extract = get_wiki_extract(url)    
     answers = []
     for section in wiki_extract:
