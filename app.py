@@ -40,12 +40,12 @@ st.markdown(
 col1, col2 = st.columns(2)
 
 with col1:
-    wiki_URL = st.text_input('Enter the URL of the wikipedia article to analyze.', value="", placeholder='https://en.wikipedia.org/wiki/Legume')
+    wiki_URL = st.text_input('Enter the URL of the wikipedia article to analyze.', value="", placeholder='https://en.wikipedia.org/wiki/GPT-4')
     if wiki_URL is not None and wiki_URL != "":
         st.components.v1.iframe(src=wiki_URL, width=None, height=550, scrolling=True)
 
 with col2:
-    question = st.text_input('Ask a question', value="", placeholder='What are legumes rich in?')
+    question = st.text_input('Ask a question', value="", placeholder='Who created GPT-4?')
     with st.spinner('Finding answer...'):
         if question is not None and question != "":
             html_answers = wikipedia.get_html_answers(question, wiki_URL, 3)
